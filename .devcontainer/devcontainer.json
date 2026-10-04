@@ -1,0 +1,49 @@
+// Środowisko kursu „Praktyczna Analiza Danych Eye-Tracking i EEG w Pythonie”
+// dla GitHub Codespaces (oraz rozszerzenia Dev Containers w lokalnym VS Code).
+// Opis formatu: https://containers.dev/implementors/json_reference/
+{
+  "name": "Kurs ET + EEG (Python 3.10)",
+
+  // Oficjalny obraz Microsoft z Pythonem 3.10 (Debian 12 „bookworm”)
+  "image": "mcr.microsoft.com/devcontainers/python:3-3.10-bookworm",
+
+  // Minimalne zasoby maszyny w Codespaces – wystarcza standardowa maszyna 2-rdzeniowa (8 GB RAM)
+  "hostRequirements": {
+    "cpus": 2,
+    "memory": "8gb",
+    "storage": "32gb"
+  },
+
+  // Automatyczna instalacja pakietów Python (wersje zapisano w requirements.txt):
+  // mne, mne-bids, pyprep, numpy, pandas, scipy, matplotlib, seaborn,
+  // jupyter, ipykernel, plotly, scikit-learn.
+  // Polecenie „updateContentCommand” wykonuje się także podczas budowania prebuildów Codespaces.
+  "updateContentCommand": "pip install --user --no-cache-dir -r requirements.txt",
+
+  // Po utworzeniu środowiska: pobranie zestawu danych EEG „sample” z MNE (ok. 1,6 GB).
+  // Działa w tle – w tym czasie można pracować z notebookami 01–02.
+  "postCreateCommand": "python skrypty/pobierz_dane_eeg.py",
+
+  "customizations": {
+    // Pliki otwierane automatycznie po pierwszym uruchomieniu Codespace
+    "codespaces": {
+      "openFiles": ["README.md"]
+    },
+    "vscode": {
+      // Rozszerzenia VS Code instalowane dla każdego studenta
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "jupyter.notebookFileRoot": "${fileDirname}",
+        "notebook.output.scrolling": true,
+        "files.exclude": {
+          "**/__pycache__": true,
+          "**/.ipynb_checkpoints": true
+        }
+      }
+    }
+  }
+}

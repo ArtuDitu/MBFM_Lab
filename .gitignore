@@ -218,3 +218,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- Kurs: Praktyczna Analiza Danych Eye-Tracking i EEG w Pythonie ---
+# Wyniki zapisywane przez notebooki (każdy uczestnik tworzy je u siebie)
+wyniki/
+# Lokalna kopia danych MNE (gdy zmienna MNE_DATA wskazuje na katalog repozytorium)
+mne_data/
+# Pliki systemowe macOS
+.DS_Store

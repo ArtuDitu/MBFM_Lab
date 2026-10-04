@@ -1,0 +1,26 @@
+# Pakiety Python dla kursu „Praktyczna Analiza Danych Eye-Tracking i EEG w Pythonie”.
+#
+# Wersje są przypięte, aby wszyscy uczestnicy mieli identyczne środowisko.
+# Zestaw przetestowano z Pythonem 3.10 (MNE 1.12 to ostatnia wersja MNE wspierająca Pythona 3.10).
+#
+# Instalacja ręczna: pip install -r requirements.txt
+
+# Analiza EEG
+mne==1.12.1
+mne-bids==0.17.0
+pyprep==0.9.0
+
+# Obliczenia i analiza danych
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.15.3
+scikit-learn==1.7.2
+
+# Wizualizacja
+matplotlib==3.10.9
+seaborn==0.13.2
+plotly==7.1.0
+
+# Notebooki Jupyter
+jupyter==1.1.1
+ipykernel==7.3.0
