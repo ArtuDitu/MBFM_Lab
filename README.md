@@ -144,19 +144,6 @@ Aktualne wartości sprawdzisz w [dokumentacji GitHub](https://docs.github.com/en
 | Wykresy Plotly się nie wyświetlają | Upewnij się, że rozszerzenie Jupyter jest włączone, i przeładuj okno (**F1** → **Developer: Reload Window**). |
 | Coś „zepsułem” w notebooku | Przywróć oryginał: prawy przycisk na pliku w panelu **Source Control** → **Discard Changes**. |
 
----
-
-## 👩‍🏫 Dla prowadzącego
-
-* **Szybszy start dla grupy.** Włącz *prebuildy* (Settings → Codespaces → Set up prebuild): pakiety instalowane w `updateContentCommand` będą gotowe od razu. Zestaw `sample` pobiera się w `postCreateCommand`, czyli osobno dla każdego studenta. Przeniesienie tego polecenia do `updateContentCommand` umieści dane w prebuildzie kosztem jego rozmiaru.
-* **Rozliczenie.** Codespace utworzony przez studenta na publicznym repozytorium zużywa jego osobisty limit. Dla repozytorium w organizacji można ustawić rozliczanie na organizację, a dla grup zajęciowych wygodne jest **GitHub Classroom** (każdy student dostaje własną kopię repozytorium).
-* **Nowe dane symulowane:** `python skrypty/generuj_dane.py` (stałe `ZIARNO` w skrypcie). Zmiana ziarna daje nowy, równie realistyczny zestaw danych, np. inny dla każdej grupy. Parametry symulacji, czyli „prawda”, którą odtwarzają notebooki, opisuje [`dane/README.md`](dane/README.md).
-* **Wersje pakietów** są przypięte w `requirements.txt` i przetestowane z Pythonem 3.10 (MNE 1.12.1). Wsparcie Pythona 3.10 kończy się w październiku 2026, a MNE ≥ 1.13 wymaga Pythona ≥ 3.11. Przy przejściu na nowszą wersję zmień obraz w `devcontainer.json` (np. `mcr.microsoft.com/devcontainers/python:3-3.12-bookworm`) i zaktualizuj wersje pakietów.
-* **Automatyczny test wszystkich notebooków** (np. przed semestrem):
-
-  ```bash
-  for nb in notebooks/0*.ipynb; do jupyter nbconvert --to notebook --execute "$nb" --output-dir /tmp/test_notebooki || break; done
-  ```
 
 ## 📚 Literatura podstawowa
 
