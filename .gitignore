@@ -224,5 +224,7 @@ __marimo__/
 wyniki/
 # Lokalna kopia danych MNE (gdy zmienna MNE_DATA wskazuje na katalog repozytorium)
 mne_data/
+# Rozwiązania zadań i klucz odpowiedzi – tylko dla prowadzących
+dla_prowadzacego/
 # Pliki systemowe macOS
 .DS_Store

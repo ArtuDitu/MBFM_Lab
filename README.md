@@ -69,7 +69,7 @@ Jeśli wolisz pracować w VS Code zainstalowanym na swoim komputerze (szybszy ed
 
 ## 📓 Notebooki
 
-Notebooki najlepiej przerabiać po kolei. Każdy kończy się podsumowaniem, zadaniami do samodzielnego wykonania i literaturą.
+Notebooki najlepiej przerabiać po kolei. Każdy kończy się podsumowaniem, **pięcioma zadaniami powtórkowymi** i literaturą. Zadania nie wprowadzają nowych metod – powtarzają kroki z notebooka – i każde kończy się jednym wynikiem do oddania: liczbą w podanym formacie albo jedną figurą.
 
 | Notebook | Temat | Dane | Czas |
 |---|---|---|---|
